@@ -5,10 +5,10 @@ import pandas as pd
 df = pd.read_csv("cars.csv")
 
 # 2. Crear filtro en barra lateral
-opcion = st.sidebar.selectbox('Filtra por categoría', df['categoria'].unique())
+opcion = st.sidebar.selectbox('Filtrar por categoría', df['mpg'].unique())
 
 # 3. Aplicar filtro
-df_filtrado = df[df['categoria'] == opcion]
+df_filtrado = df[df['mpg'] == opcion]
 
 # 4. Mostrar resultado
 st.write("Datos filtrados:", df_filtrado)
