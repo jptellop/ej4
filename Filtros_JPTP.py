@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # 1. Cargar datos
-df = pd.read_csv("datos.csv")
+df = pd.read_csv("cars.csv")
 
 # 2. Crear filtro en barra lateral
 opcion = st.sidebar.selectbox('Filtra por categoría', df['categoria'].unique())
